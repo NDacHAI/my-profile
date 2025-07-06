@@ -28,7 +28,7 @@ const Contact = () => {
                         onClick={() => setSelectedCat(cat.title)}
                         className={`flex items-center px-4 py-2 rounded-lg font-medium gap-2 transition ${selectedCat === cat.title
                             ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                            : 'bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer'
+                            : 'bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white border border-gray-900 dark:border dark:border-white hover:-translate-y-1 transition-all duration-300 cursor-pointer'
                             }`}
                     >
                         <FontAwesomeIcon icon={cat.icon} />
