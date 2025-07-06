@@ -61,8 +61,11 @@ const Projects = () => {
     return (
         <section id="projects" className="max-w-7xl mx-auto my-12 px-4">
             <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-gray-800">Projects</h2>
-                <p className="text-gray-600 mt-3 font-medium text-lg">Explore some of the works I've built — from slick frontend UIs, powerful backend APIs, to fullstack apps connected with real-time databases.
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                    Projects
+                </h2>
+                <p className="mt-3 font-medium text-lg text-gray-700 dark:text-gray-300">
+                    Explore some of the works I've built — from slick frontend UIs, powerful backend APIs, to fullstack apps connected with real-time databases.
                 </p>
             </div>
 
@@ -72,9 +75,10 @@ const Projects = () => {
                     <button
                         key={cat}
                         onClick={() => { setSelectedCat(cat); setPage(1); }}
-                        className={`px-4 py-2 rounded-lg font-medium transition ${selectedCat === cat
-                            ? 'bg-gray-800 text-white'
-                            : 'bg-gray-200 text-gray-800 hover:-translate-y-1 transition-all duration-300 cursor-pointer'
+                        className={`px-4 py-2 rounded-lg font-medium transition
+                            ${selectedCat === cat
+                                ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                                : 'bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-900 dark:border dark:border-white hover:-translate-y-1 transition-all duration-300 cursor-pointer'
                             }`}
                     >
                         {cat}
@@ -94,7 +98,7 @@ const Projects = () => {
                 <button
                     onClick={() => setPage(prev => Math.max(prev - 1, 1))}
                     disabled={page === 1}
-                    className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50"
+                    className="px-3 py-1 bg-gray-200 text-gray-900 rounded disabled:opacity-50 dark:bg-gray-700 dark:text-white"
                 >
                     Prev
                 </button>
@@ -102,9 +106,10 @@ const Projects = () => {
                     <button
                         key={idx}
                         onClick={() => setPage(idx + 1)}
-                        className={`px-3 py-1 rounded ${page === idx + 1
-                            ? 'bg-gray-800 text-white'
-                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                        className={`px-3 py-1 rounded
+                            ${page === idx + 1
+                                ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
+                                : 'bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-700 dark:text-white'
                             }`}
                     >
                         {idx + 1}
@@ -113,7 +118,7 @@ const Projects = () => {
                 <button
                     onClick={() => setPage(prev => Math.min(prev + 1, totalPages))}
                     disabled={page === totalPages}
-                    className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50"
+                    className="px-3 py-1 bg-gray-200 text-gray-900 rounded disabled:opacity-50 dark:bg-gray-700 dark:text-white"
                 >
                     Next
                 </button>
@@ -123,3 +128,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

@@ -44,7 +44,7 @@ export default function MarqueeText() {
     }, []);
 
     return (
-        <div className="text-2xl font-medium py-4">
+        <div className="text-2xl font-medium py-4 text-gray-900 dark:text-white">
             {chars.slice(0, subIndex).join('')}
             <span className="inline-block w-1">{blink ? '|' : ' '}</span>
         </div>

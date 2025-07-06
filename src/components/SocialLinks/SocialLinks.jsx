@@ -14,15 +14,20 @@ const SocialLinks = () => {
     ];
 
     return (
-        <ul className="flex align-center gap-3">
+        <ul className="flex items-center gap-3">
             {contact.map((link, index) => (
-
                 <li key={index}>
                     <a href={link.href} target="_blank" rel="noopener noreferrer">
                         <div
-                            className="flex items-center justify-center text-xl w-10 h-10 bg-gray-800 rounded-full text-white hover:scale-110 transition-all"
+                            className="
+                                flex items-center justify-center 
+                                text-xl w-10 h-10 
+                                bg-gray-900 text-white 
+                                dark:bg-white dark:text-gray-900
+                                rounded-full 
+                                hover:scale-110 transition-all
+                            "
                         >
-
                             <FontAwesomeIcon className="w-[20px] h-[20px]" icon={link.icon} />
                         </div>
                     </a>
