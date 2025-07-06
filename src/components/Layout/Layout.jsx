@@ -8,6 +8,7 @@ import Header from "../Header/Header";
 import Home from '../../pages/Home/Home';
 import Projects from '../../pages/Projects/Projects';
 import Skills from "../../pages/Skills/Skills";
+import Contact from "../../pages/Contact/Contact";
 
 const Layout = () => {
     useEffect(() => {
@@ -28,6 +29,7 @@ const Layout = () => {
                 <About />
                 <Projects />
                 <Skills />
+                <Contact />
                 <Footer />
             </div>
         </div>
