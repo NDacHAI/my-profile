@@ -24,7 +24,7 @@ const About = () => {
                     <img alt="about me" className="w-sm max-w-md rounded-xl shadow-lg object-cover 
              border-4 border-white dark:border-gray-800 
              hover:shadow-3xl hover:-translate-y-2 
-             transition-all duration-300" src="../../../public/avatar.jpg" />
+             transition-all duration-300" src="/avatar.jpg" />
                 </div>
 
                 <div className="w-full text-gray-800 ">

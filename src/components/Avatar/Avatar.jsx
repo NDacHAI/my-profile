@@ -10,7 +10,7 @@ const Avatar = () => {
                 <img
                     className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl dark:shadow-gray-800 border-4 border-white 
                             dark:border-gray-800 hover:shadow-3xl hover:scale-105 transition-all duration-300 animation-float"
-                    src="../../../public/avatar.jpg"
+                    src="/avatar.jpg"
                     alt="Avatar"
                 />
             </div>
