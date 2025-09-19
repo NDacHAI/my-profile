@@ -60,7 +60,7 @@ const Projects = () => {
     }, [filtered, page]);
 
     return (
-        <section id="projects" className="max-w-7xl mx-auto my-12 px-4 scroll-mt-[80px]">
+        <section id="projects" className="max-w-7xl mx-auto my-12 px-4 mt-20 scroll-mt-[100px]">
             {/* Title + desc */}
             <div className="text-center mb-6">
                 <FadeInSection direction="up">

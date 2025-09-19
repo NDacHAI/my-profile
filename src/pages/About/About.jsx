@@ -71,7 +71,7 @@ const About = () => {
                                     />
                                     <h3 className="text-xl font-semibold">Who Am I</h3>
                                 </div>
-                                <span>
+                                <span className="text-left">
                                     I'm a frontend developer who crafts responsive, interactive, and clean UIs. With a background in Informatics Engineering, I blend design sense with technical logic.
                                 </span>
                             </div>
@@ -83,7 +83,7 @@ const About = () => {
                                     />
                                     <h3 className="text-xl font-semibold">My Approach</h3>
                                 </div>
-                                <span>
+                                <span className="text-left">
                                     I focus on user-centered design, performance, and accessibility always evolving with modern tech to deliver seamless digital experiences.
                                 </span>
                             </div>

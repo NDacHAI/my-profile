@@ -13,7 +13,7 @@ const ProjectCard = ({
     codeLink,
 }) => {
     return (
-        <div className="border rounded-lg p-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-white hover:-translate-y-1 transition-all duration-300">
+        <div className="border rounded-lg p-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-white hover:-translate-y-1 transition-all duration-300 text-left">
             <div className="flex items-center gap-3">
                 <div className="mb-4">
                     <FontAwesomeIcon
