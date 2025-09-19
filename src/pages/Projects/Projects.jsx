@@ -1,7 +1,8 @@
-// src/components/Projects.jsx
 import React, { useState, useMemo } from 'react';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { faWallet, faBook } from '@fortawesome/free-solid-svg-icons';
+import FadeInSection from '../../components/FadeInSection/FadeInSection';
+import SlideInSection from '../../components/SlideInSection/SlideInSection';
 
 const projectsData = [
     {
@@ -59,17 +60,22 @@ const Projects = () => {
     }, [filtered, page]);
 
     return (
-        <section id="projects" className="max-w-7xl mx-auto my-12 px-4">
+        <section id="projects" className="max-w-7xl mx-auto my-12 px-4 scroll-mt-[80px]">
+            {/* Title + desc */}
             <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-                    Projects
-                </h2>
-                <p className="mt-3 font-medium text-lg text-gray-700 dark:text-gray-300">
-                    Explore some of the works I've built — from slick frontend UIs, powerful backend APIs, to fullstack apps connected with real-time databases.
-                </p>
+                <FadeInSection direction="up">
+                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                        Projects
+                    </h2>
+                </FadeInSection>
+                <FadeInSection direction="up">
+                    <p className="mt-3 font-medium text-lg text-gray-700 dark:text-gray-300">
+                        Explore some of the works I've built — from slick frontend UIs, powerful backend APIs, to fullstack apps connected with real-time databases.
+                    </p>
+                </FadeInSection>
             </div>
 
-            {/* Filter */}
+            {/* Filter (không thêm animation) */}
             <div className="flex justify-center gap-4 mb-6">
                 {categories.map(cat => (
                     <button
@@ -86,14 +92,19 @@ const Projects = () => {
                 ))}
             </div>
 
-            {/* Grid */}
+            {/* Grid với animation từng card */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {paginated.map(p => (
-                    <ProjectCard key={p.id} {...p} />
+                {paginated.map((p, idx) => (
+                    <SlideInSection
+                        key={p.id}
+                        direction={idx % 2 === 0 ? "left" : "right"}
+                    >
+                        <ProjectCard {...p} />
+                    </SlideInSection>
                 ))}
             </div>
 
-            {/* Pagination */}
+            {/* Pagination (không thêm animation) */}
             <div className="flex justify-center items-center gap-3 mt-10">
                 <button
                     onClick={() => setPage(prev => Math.max(prev - 1, 1))}
@@ -128,4 +139,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

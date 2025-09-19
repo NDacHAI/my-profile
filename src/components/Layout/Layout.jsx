@@ -1,7 +1,5 @@
-import { useEffect, useContext } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
+import { useContext } from "react";
 import About from "../../pages/About/About";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -15,14 +13,6 @@ import Testimonials from "../../pages/Testimonials/Testimonials";
 const Layout = () => {
     const { theme } = useContext(ThemeContext);
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: false,
-            mirror: true,
-        });
-        AOS.refresh();
-    }, []);
 
     return (
         <div

@@ -32,7 +32,7 @@ const ContactMe = () => {
                                     className="p-3 text-xl rounded-lg bg-gray-900 text-white dark:bg-gray-600"
                                 />
                                 <div>
-                                    <h2 className="text-xl font-semibold dark:text-white">{item.label}</h2>
+                                    <h2 className="text-xl font-semibold dark:text-white text-left">{item.label}</h2>
                                     <p className="text-sm text-gray-600 dark:text-gray-400">{item.content}</p>
                                 </div>
                             </div>

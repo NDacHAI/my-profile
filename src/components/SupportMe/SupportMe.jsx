@@ -1,4 +1,10 @@
+import { useState } from "react";
+import QrPopUp from "../QrPopUp/QrPopUp";
+
 const SupportMe = () => {
+
+    const [qrPopup, setQrPopup] = useState(false)
+
     return (
         <div className="text-center">
             <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
@@ -8,36 +14,37 @@ const SupportMe = () => {
                 If you find this project helpful, please consider supporting me through the options below.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                    href="https://www.buymeacoffee.com/yourusername"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
                     className="
                         border border-gray-900 dark:border-white
                         text-gray-900 dark:text-white
                         px-4 py-2 rounded-lg font-medium
-                        hover:-translate-y-1 transition-all duration-300
+                        hover:-translate-y-1 transition-all duration-300 cursor-pointer
                     "
+                    onClick={() => setQrPopup(true)}
                 >
                     ☕ Buy Me a Coffee
-                </a>
-                <a
-                    href="https://www.paypal.me/yourusername"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                </button>
+                <button
                     className="
                         bg-gray-900 dark:bg-white
                         text-white dark:text-gray-900
                         px-4 py-2 rounded-lg font-medium
-                        hover:-translate-y-1 transition-all duration-300
+                        hover:-translate-y-1 transition-all duration-300 cursor-pointer
                     "
+                    onClick={() => setQrPopup(true)}
                 >
                     💵 Donate Me
-                </a>
+                </button>
             </div>
             <p className="text-xl text-gray-900 dark:text-white mt-6">
                 Thank You !
             </p>
+
+            <QrPopUp
+                open={qrPopup}
+                onClose={() => setQrPopup(false)}
+            />
         </div>
     );
 };
