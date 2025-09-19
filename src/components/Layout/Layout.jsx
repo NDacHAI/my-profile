@@ -10,6 +10,7 @@ import Projects from '../../pages/Projects/Projects';
 import Skills from "../../pages/Skills/Skills";
 import Contact from "../../pages/Contact/Contact";
 import { ThemeContext } from "../../context/ThemeContext";
+import Testimonials from "../../pages/Testimonials/Testimonials";
 
 const Layout = () => {
     const { theme } = useContext(ThemeContext);
@@ -26,8 +27,8 @@ const Layout = () => {
     return (
         <div
             className={`min-h-screen transition-colors duration-300 ${theme === "dark"
-                    ? "bg-gray-900 text-white"
-                    : "bg-white text-gray-900"
+                ? "bg-gray-900 text-white"
+                : "bg-white text-gray-900"
                 }`}
         >
             <Header />
@@ -36,6 +37,7 @@ const Layout = () => {
                 <About />
                 <Projects />
                 <Skills />
+                <Testimonials />
                 <Contact />
                 <Footer />
             </div>
