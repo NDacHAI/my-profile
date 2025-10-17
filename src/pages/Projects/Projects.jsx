@@ -1,44 +1,27 @@
 import React, { useState, useMemo } from 'react';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import { faWallet, faBook } from '@fortawesome/free-solid-svg-icons';
+import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
 import FadeInSection from '../../components/FadeInSection/FadeInSection';
 import SlideInSection from '../../components/SlideInSection/SlideInSection';
 
 const projectsData = [
     {
         id: 1,
-        title: 'Money Tracker',
-        type: 'Fullstack',
+        title: 'Todo app',
+        type: 'Front End',
         year: 2025,
         status: 'Completed',
         features: [
-            'Supabase Auth + Database',
-            'CRUD transaksi harian',
-            'Statistik pengeluaran',
+            'Firebase Auth + Todo',
+            'CRUD todo',
             'Dark mode UI',
         ],
-        techStack: ['React', 'Supabase', 'Tailwind'],
-        demoLink: 'https://demo.money-tracker.com',
-        codeLink: 'https://github.com/yourname/money-tracker',
-        icon: faWallet,
+        techStack: ['React', 'Firebase', 'Tailwind'],
+        demoLink: 'https://ndh-todo.vercel.app/',
+        codeLink: 'https://github.com/NDacHAI/todo-app',
+        icon: faSquareCheck,
     },
-    {
-        id: 2,
-        title: 'Blog Platform',
-        type: 'Front End',
-        year: 2024,
-        status: 'Live',
-        features: [
-            'Markdown editor',
-            'Responsive design',
-            'SEO optimized',
-            'SEO optimized',
-        ],
-        techStack: ['Next.js', 'Tailwind', 'Vercel'],
-        demoLink: 'https://demo.blog-platform.com',
-        codeLink: 'https://github.com/yourname/blog-platform',
-        icon: faBook,
-    },
+
 ];
 
 const categories = ['All', 'Front End', 'Back End', 'Fullstack'];

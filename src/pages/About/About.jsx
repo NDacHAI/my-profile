@@ -34,7 +34,7 @@ const About = () => {
     };
 
     return (
-        <section id="about" className="max-w-7xl mx-auto my-8 scroll-mt-[80px]">
+        <section id="about" className="max-w-7xl mx-auto my-4 scroll-mt-[80px]">
             <div className="flex items-center flex-col gap-2 text-gray-900 dark:text-white">
                 {randomWrapper(<h1 className="text-4xl font-bold">About Me</h1>, "title")}
                 {randomWrapper(
