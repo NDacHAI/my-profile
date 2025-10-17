@@ -19,7 +19,7 @@ const Layout = () => {
             className={`min-h-screen transition-colors duration-300 ${theme === "dark"
                 ? "bg-gray-900 text-white"
                 : "bg-white text-gray-900"
-                }`}
+                } overflow-hidden`}
         >
             <Header />
             <div className="px-4 sm:px-0">
