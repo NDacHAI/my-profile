@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Home from '../../pages/Home/Home';
 import Projects from '../../pages/Projects/Projects';
+import Experience from "../../pages/Experience/Experience";
 import Skills from "../../pages/Skills/Skills";
 import Contact from "../../pages/Contact/Contact";
 import { ThemeContext } from "../../context/ThemeContext";
@@ -26,6 +27,7 @@ const Layout = () => {
                 <Home />
                 <About />
                 <Projects />
+                <Experience />
                 <Skills />
                 <Testimonials />
                 <Contact />
