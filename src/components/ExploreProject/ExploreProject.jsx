@@ -1,9 +1,10 @@
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ExploreProject = () => {
     return (
-        <button
+        <a
+            href="#projects"
             className="
         flex items-center justify-center gap-3
         bg-gray-900 dark:bg-white
@@ -15,9 +16,9 @@ const ExploreProject = () => {
         cursor-pointer
       "
         >
-            <FontAwesomeIcon icon={faDownload} />
-            Explore My Project
-        </button>
+            <FontAwesomeIcon icon={faArrowRight} />
+            View Projects
+        </a>
     );
 };
 

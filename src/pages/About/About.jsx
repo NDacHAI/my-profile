@@ -14,15 +14,14 @@ import SlideInSection from "../../components/SlideInSection/SlideInSection";
 
 const About = () => {
     const info = [
-        { icon: faIdCard, title: "Name", content: "Nguyễn Đắc Hải" },
-        { icon: faCalendarDay, title: "Date of Birth", content: "November, 27, 2003" },
-        { icon: faLocationDot, title: "Place of Birth", content: "Đăk Nông, Việt Nam" },
+        { icon: faIdCard, title: "Name", content: "Nguyen Dac Hai" },
+        { icon: faCalendarDay, title: "Date of Birth", content: "November 27, 2003" },
+        { icon: faLocationDot, title: "Location", content: "Lam Dong, Vietnam" },
         { icon: faEnvelope, title: "Email", content: "ndachai2003@gmail.com" },
-        { icon: faPhone, title: "Phone", content: "0123456789" },
+        { icon: faPhone, title: "Phone", content: "Hidden" },
         { icon: faBook, title: "Education", content: "Duy Tan University" },
     ];
 
-    // Random wrapper
     const randomWrapper = (children, key) => {
         const effects = [
             <FadeInSection key={key} direction="up">{children}</FadeInSection>,
@@ -38,8 +37,8 @@ const About = () => {
             <div className="flex items-center flex-col gap-2 text-gray-900 dark:text-white">
                 {randomWrapper(<h1 className="text-4xl font-bold">About Me</h1>, "title")}
                 {randomWrapper(
-                    <span className="text-lg font-medium">
-                        Discover my journey, passions, and the story behind my work
+                    <span className="text-lg font-medium text-center">
+                        Discover my background, interests, and the way I approach web development.
                     </span>,
                     "subtitle"
                 )}
@@ -49,7 +48,7 @@ const About = () => {
                 {randomWrapper(
                     <div className="w-full flex justify-center lg:justify-start mt-12">
                         <img
-                            alt="about me"
+                            alt="Nguyen Dac Hai"
                             className="w-sm max-w-md rounded-xl shadow-lg object-cover 
                                 border-4 border-gray-900 dark:border-white 
                                 hover:shadow-3xl hover:-translate-y-2 
@@ -72,7 +71,7 @@ const About = () => {
                                     <h3 className="text-xl font-semibold">Who Am I</h3>
                                 </div>
                                 <span className="text-left">
-                                    I'm a frontend developer who crafts responsive, interactive, and clean UIs. With a background in Informatics Engineering, I blend design sense with technical logic.
+                                    I'm a Web Developer with a strong interest in responsive interfaces, practical user experience, and maintainable frontend code.
                                 </span>
                             </div>
                             <div className="flex flex-col gap-2">
@@ -84,7 +83,7 @@ const About = () => {
                                     <h3 className="text-xl font-semibold">My Approach</h3>
                                 </div>
                                 <span className="text-left">
-                                    I focus on user-centered design, performance, and accessibility always evolving with modern tech to deliver seamless digital experiences.
+                                    I focus on simple, reliable products: clear UI, fast interactions, accessible layouts, and code that is easy to improve over time.
                                 </span>
                             </div>
                         </div>

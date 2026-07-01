@@ -1,9 +1,11 @@
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DownLoadCV = () => {
     return (
-        <button
+        <a
+            href="/Nguyen-Dac-Hai-CV.pdf"
+            download
             className="
         flex items-center justify-center gap-3
         border-2 border-gray-900 dark:border-white
@@ -15,9 +17,9 @@ const DownLoadCV = () => {
         cursor-pointer
       "
         >
-            <FontAwesomeIcon icon={faEnvelope} />
-            DownLoad My CV
-        </button>
+            <FontAwesomeIcon icon={faDownload} />
+            Download CV
+        </a>
     );
 };
 

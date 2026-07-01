@@ -13,9 +13,9 @@ const ProjectCard = ({
     codeLink,
 }) => {
     return (
-        <div className="border rounded-lg p-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-white hover:-translate-y-1 transition-all duration-300 text-left">
-            <div className="flex items-center gap-3">
-                <div className="mb-4">
+        <div className="flex h-full min-h-[480px] flex-col border rounded-lg p-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-white hover:-translate-y-1 transition-all duration-300 text-left">
+            <div className="flex min-h-[88px] items-start gap-3">
+                <div className="shrink-0">
                     <FontAwesomeIcon
                         icon={icon}
                         className="text-3xl p-2 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 rounded-lg"
@@ -24,14 +24,13 @@ const ProjectCard = ({
 
                 <div>
                     <h3 className="text-2xl font-semibold mb-1">{title}</h3>
-                    <p className="text-sm mb-4 text-gray-600 dark:text-gray-400">
-                        {type} • {year} • {status}
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {type} - {year} - {status}
                     </p>
                 </div>
             </div>
 
-            {/* Features */}
-            <div className="mb-4">
+            <div className="mt-4 mb-4 min-h-[148px]">
                 <h4 className="font-medium mb-2">Features:</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
                     {features.map((f, i) => (
@@ -40,8 +39,7 @@ const ProjectCard = ({
                 </ul>
             </div>
 
-            {/* Tech Stack */}
-            <div className="mb-6">
+            <div className="mb-6 flex-1">
                 <h4 className="font-medium mb-2">Tech Stack:</h4>
                 <div className="flex flex-wrap gap-2">
                     {techStack.map((tech, i) => (
@@ -55,17 +53,18 @@ const ProjectCard = ({
                 </div>
             </div>
 
-            {/* Buttons */}
-            <div className="flex gap-4 font-medium">
-                <a
-                    href={demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-3 py-2 rounded bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 hover:-translate-y-1 transition-all duration-300"
-                >
-                    <span>Demo</span>
-                    <FontAwesomeIcon icon={faExternalLink} />
-                </a>
+            <div className="mt-auto flex gap-4 font-medium">
+                {demoLink && (
+                    <a
+                        href={demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-3 py-2 rounded bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 hover:-translate-y-1 transition-all duration-300"
+                    >
+                        <span>Demo</span>
+                        <FontAwesomeIcon icon={faExternalLink} />
+                    </a>
+                )}
                 <a
                     href={codeLink}
                     target="_blank"

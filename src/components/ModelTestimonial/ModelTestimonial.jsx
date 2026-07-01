@@ -6,14 +6,12 @@ import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import { addTestimonial } from "../../firebaseService";
 
 const ModelTestimonial = ({ open, onClose, onSave }) => {
-
     const [form, setForm] = useState({
         fullName: "",
         email: "",
         major: "",
         comment: "",
-    })
-
+    });
 
     if (!open) return null;
 
@@ -23,26 +21,23 @@ const ModelTestimonial = ({ open, onClose, onSave }) => {
             return;
         }
         try {
-            await addTestimonial(form);   // post lên Firestore
-            setForm({ fullName: "", email: "", major: "", comment: "" }); // reset
-            onSave && onSave(); // gọi callback cha (nếu có)
-            onClose(); // đóng modal
+            await addTestimonial(form);
+            setForm({ fullName: "", email: "", major: "", comment: "" });
+            onSave && onSave();
+            onClose();
         } catch (err) {
             console.error("Error adding testimonial: ", err);
         }
     };
 
     return (
-        <div className="fixed inset-0 bg-gray-600/10 backdrop-blur-sm flex items-center justify-center z-50"
-        >
+        <div className="fixed inset-0 bg-gray-600/10 backdrop-blur-sm flex items-center justify-center z-50">
             <div className="bg-white dark:bg-gray-900 rounded-lg w-md mx-auto p-4 shadow relative flex flex-col">
-                <FontAwesomeIcon icon={faX} className="absolute right-5 cursor-pointer"
-                    onClick={onClose}
-                />
+                <FontAwesomeIcon icon={faX} className="absolute right-5 cursor-pointer" onClick={onClose} />
                 <div className="flex flex-col justify-center items-center mt-4">
                     <FontAwesomeIcon icon={faMessage} className="bg-gray-900 text-white dark:bg-white dark:text-gray-900 p-4 rounded-full " />
                     <h1 className="text-xl my-2">Share Your Testimonial</h1>
-                    <h2 className="text-sm">Tell us about your experience working with us</h2>
+                    <h2 className="text-sm">Tell us about your experience working with me</h2>
                 </div>
                 <div>
                     <div>
@@ -79,7 +74,7 @@ const ModelTestimonial = ({ open, onClose, onSave }) => {
                             <FontAwesomeIcon icon={faBriefcase} className="text-gray-400 mr-2" />
                             <input
                                 type="text"
-                                placeholder="CEO, Developer, Design, etc."
+                                placeholder="Developer, Designer, Manager, etc."
                                 value={form.major}
                                 onChange={(e) => setForm({ ...form, major: e.target.value })}
                                 className="w-full bg-transparent outline-none text-gray-900 dark:text-white placeholder-gray-400"
@@ -102,10 +97,10 @@ const ModelTestimonial = ({ open, onClose, onSave }) => {
                     </div>
                 </div>
 
-
                 <div className="flex gap-4 text-sm m-8 items-center mx-auto">
                     <button className="py-2 px-12 border border-gray-300 rounded-xl cursor-pointer" onClick={onClose}>Cancel</button>
-                    <button className="flex gap-2 items-center bg-gray-900 text-white dark:bg-white dark:text-gray-900 py-2 px-12 border border-gray-300 rounded-xl cursor-pointer"
+                    <button
+                        className="flex gap-2 items-center bg-gray-900 text-white dark:bg-white dark:text-gray-900 py-2 px-12 border border-gray-300 rounded-xl cursor-pointer"
                         onClick={() => handleSubmit()}
                     >
                         <FontAwesomeIcon icon={faPaperPlane} />
@@ -113,9 +108,8 @@ const ModelTestimonial = ({ open, onClose, onSave }) => {
                     </button>
                 </div>
             </div>
-
         </div>
     );
-}
+};
 
 export default ModelTestimonial;

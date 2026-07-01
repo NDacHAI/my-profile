@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faCode,
     faBars,
-    faXmark
+    faCode,
+    faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import links from "./MenuLinks";
 import MobileMenu from "./MobileMenu";
@@ -34,7 +34,6 @@ const Header = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Tạo activeClass theo theme
     const activeClass =
         theme === "dark"
             ? "bg-white text-gray-900"
@@ -45,25 +44,23 @@ const Header = () => {
 
     return (
         <header className="h-[80px] flex items-center fixed w-full bg-white dark:bg-gray-900 z-50 shadow-lg dark:shadow-white/5">
-
-            <div className="w-7xl max-w-[1280px] mx-auto flex items-center justify-between px-2 sm:px-0 py-4">
+            <div className="w-full max-w-[1280px] mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
                 <a
                     href="#home"
                     onClick={() => setActive("#home")}
                     className="flex items-center gap-3 text-2xl text-black dark:text-white"
                 >
                     <FontAwesomeIcon icon={faCode} />
-                    <h1>My Profile</h1>
+                    <h1 className="font-semibold">My Portfolio</h1>
                 </a>
 
-                <ul className="hidden md:flex items-center gap-6">
+                <ul className="hidden md:flex items-center gap-2">
                     {links.map((link) => (
                         <li key={link.href}>
                             <a
                                 href={link.href}
                                 onClick={() => setActive(link.href)}
-                                className={`flex items-center gap-1 px-3 py-2 rounded-lg transition duration-200 ${active === link.href ? activeClass : inactiveClass
-                                    }`}
+                                className={`flex items-center gap-1 px-3 py-2 rounded-lg transition duration-200 ${active === link.href ? activeClass : inactiveClass}`}
                             >
                                 <FontAwesomeIcon icon={link.icon} />
                                 <span>{link.label}</span>
@@ -74,7 +71,8 @@ const Header = () => {
 
                 <button
                     onClick={() => setMenuOpen((o) => !o)}
-                    className="md:hidden text-2xl text-black dark:text-white mr-3"
+                    className="md:hidden text-2xl text-black dark:text-white"
+                    aria-label="Toggle menu"
                 >
                     {menuOpen ? (
                         <FontAwesomeIcon icon={faXmark} />

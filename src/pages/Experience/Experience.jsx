@@ -8,7 +8,6 @@ import {
     faNetworkWired,
     faPeopleGroup,
     faServer,
-    faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
@@ -17,15 +16,15 @@ import SlideInSection from "../../components/SlideInSection/SlideInSection";
 const workExperiences = [
     {
         icon: faBuilding,
-        title: "Intern Developer",
+        title: "Fullstack Intern Developer",
         role: "Enterprise HRM System",
         project: "Visnam Joint Stock Company",
-        period: "3/2025 - Now",
+        period: "03/2025 - Present",
         location: "Work Experience",
         responsibilities: [
-            "Built and maintained HRM features (employees, leave, payroll, access control).",
-            "Developed RESTful APIs and database architecture using ASP.NET Core & EF Core.",
-            "Implemented JWT + RBAC and workflow automation.",
+            "Built and maintained HRM features including employees, leave, payroll, and access control.",
+            "Developed RESTful APIs and database architecture using ASP.NET Core and EF Core.",
+            "Implemented JWT, RBAC, and workflow automation features.",
         ],
         techStack: [".NET", "Blazor", "PostgreSQL", "EF Core", "REST API", "JWT", "Git"],
     },
@@ -51,14 +50,10 @@ const Experience = () => {
             <div className="mx-auto max-w-7xl">
                 <FadeInSection direction="up">
                     <div className="mb-8 flex justify-center gap-4">
-                        <button className="flex items-center gap-2 rounded-lg border border-white px-6 py-3 font-semibold text-white">
+                        <div className="flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-slate-900">
                             <FontAwesomeIcon icon={faBriefcase} />
-                            <span>Work</span>
-                        </button>
-                        <button className="flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-slate-900">
-                            <FontAwesomeIcon icon={faUserGroup} />
-                            <span>Organization</span>
-                        </button>
+                            <span>Work Experience</span>
+                        </div>
                     </div>
                 </FadeInSection>
 
@@ -82,7 +77,7 @@ const Experience = () => {
                                             {item.role}
                                         </p>
                                         <p className="mt-1 text-sm text-slate-400">
-                                            {item.period} • {item.location}
+                                            {item.period} - {item.location}
                                         </p>
                                     </div>
                                 </div>

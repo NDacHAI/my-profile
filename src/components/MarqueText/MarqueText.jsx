@@ -1,10 +1,9 @@
-'use client';
 import { useState, useEffect } from 'react';
 
 const texts = [
     "🚀 I am a Web Developer",
-    "🚀 I love building amazing websites",
-    "🚀 Contact me anytime"
+    "🚀 I build clean and responsive web apps",
+    "🚀 React, Tailwind CSS, JavaScript"
 ];
 
 export default function MarqueeText() {

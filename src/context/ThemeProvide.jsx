@@ -2,15 +2,12 @@ import { useEffect, useState } from "react";
 import { ThemeContext } from "./ThemeContext";
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState(() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) return savedTheme;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    });
 
-    // 1️⃣ Lần đầu mount, đọc prefers-color-scheme
-    useEffect(() => {
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        setTheme(prefersDark ? "dark" : "light");
-    }, []);
-
-    // 2️⃣ Mỗi khi theme thay đổi, gắn/xóa class 'dark' trên <html>
     useEffect(() => {
         const root = document.documentElement;
         if (theme === "dark") {
@@ -18,10 +15,15 @@ export const ThemeProvider = ({ children }) => {
         } else {
             root.classList.remove("dark");
         }
+        localStorage.setItem("theme", theme);
     }, [theme]);
 
+    const toggleTheme = () => {
+        setTheme((currentTheme) => currentTheme === "dark" ? "light" : "dark");
+    };
+
     return (
-        <ThemeContext.Provider value={{ theme }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}
         </ThemeContext.Provider>
     );

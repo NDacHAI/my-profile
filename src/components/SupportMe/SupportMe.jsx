@@ -2,8 +2,7 @@ import { useState } from "react";
 import QrPopUp from "../QrPopUp/QrPopUp";
 
 const SupportMe = () => {
-
-    const [qrPopup, setQrPopup] = useState(false)
+    const [qrPopup, setQrPopup] = useState(false);
 
     return (
         <div className="text-center">
@@ -11,7 +10,7 @@ const SupportMe = () => {
                 Support My Work
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-                If you find this project helpful, please consider supporting me through the options below.
+                If you find my work helpful, you can support me through the options below.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -23,7 +22,7 @@ const SupportMe = () => {
                     "
                     onClick={() => setQrPopup(true)}
                 >
-                    ☕ Buy Me a Coffee
+                    Buy Me a Coffee
                 </button>
                 <button
                     className="
@@ -34,11 +33,11 @@ const SupportMe = () => {
                     "
                     onClick={() => setQrPopup(true)}
                 >
-                    💵 Donate Me
+                    Donate Me
                 </button>
             </div>
             <p className="text-xl text-gray-900 dark:text-white mt-6">
-                Thank You !
+                Thank you!
             </p>
 
             <QrPopUp

@@ -6,21 +6,21 @@ import FadeInSection from "../../components/FadeInSection/FadeInSection";
 import SlideInSection from "../../components/SlideInSection/SlideInSection";
 
 const skillsData = [
-    { icon: faHtml5, title: 'HTML', content: 'Basic', type: 'Frontend' },
-    { icon: faCss, title: 'CSS', content: 'Basic', type: 'Frontend' },
-    { icon: faJs, title: 'JavaScript', content: 'Basic', type: 'Frontend' },
-    { icon: faReact, title: 'React', content: 'Basic', type: 'Frontend' },
-    { icon: faWind, title: 'Tailwind', content: 'Basic', type: 'Frontend' },
-    { icon: faBolt, title: 'Vite', content: 'Basic', type: 'Frontend' },
-    { icon: faNodeJs, title: 'Node.js', content: 'Basic', type: 'Backend' },
-    { icon: faLayerGroup, title: 'Express.js', content: 'Basic', type: 'Backend' },
-    { icon: faDatabase, title: 'PostgreSQL', content: 'Basic', type: 'Backend' },
-    { icon: faDatabase, title: 'MongoDB ', content: 'Basic', type: 'Backend' },
-    { icon: faKey, title: 'JWT Auth', content: 'Basic', type: 'Backend' },
-    { icon: faGit, title: 'Git', content: 'Basic', type: 'Other tools' },
-    { icon: faGithub, title: 'Github', content: 'Basic', type: 'Other tools' },
-    { icon: faFigma, title: 'Figma', content: 'Basic', type: 'Other tools' },
-    { icon: faPaperPlane, title: 'Postman', content: 'Basic', type: 'Other tools' },
+    { icon: faHtml5, title: 'HTML', content: 'Semantic structure and accessible markup', type: 'Frontend' },
+    { icon: faCss, title: 'CSS', content: 'Responsive layouts and polished UI styling', type: 'Frontend' },
+    { icon: faJs, title: 'JavaScript', content: 'Interactive behavior and application logic', type: 'Frontend' },
+    { icon: faReact, title: 'React', content: 'Component-based web interfaces', type: 'Frontend' },
+    { icon: faWind, title: 'Tailwind CSS', content: 'Fast styling with utility-first workflows', type: 'Frontend' },
+    { icon: faBolt, title: 'Vite', content: 'Modern frontend tooling and development server', type: 'Frontend' },
+    { icon: faNodeJs, title: 'Node.js', content: 'Backend fundamentals and API workflows', type: 'Backend' },
+    { icon: faLayerGroup, title: 'Express.js', content: 'REST API structure and routing basics', type: 'Backend' },
+    { icon: faDatabase, title: 'PostgreSQL', content: 'Relational database design basics', type: 'Backend' },
+    { icon: faDatabase, title: 'MongoDB', content: 'Document database fundamentals', type: 'Backend' },
+    { icon: faKey, title: 'JWT Auth', content: 'Authentication and authorization concepts', type: 'Backend' },
+    { icon: faGit, title: 'Git', content: 'Version control for daily development', type: 'Other tools' },
+    { icon: faGithub, title: 'GitHub', content: 'Code hosting and project collaboration', type: 'Other tools' },
+    { icon: faFigma, title: 'Figma', content: 'Reading designs and creating UI references', type: 'Other tools' },
+    { icon: faPaperPlane, title: 'Postman', content: 'Testing APIs during development', type: 'Other tools' },
 ];
 
 const categories = ['Frontend', 'Backend', 'Other tools'];
@@ -43,12 +43,11 @@ const Skills = () => {
                 </FadeInSection>
                 <FadeInSection direction="up">
                     <p className="text-gray-600 dark:text-gray-300 mt-3 font-medium text-lg">
-                        A glimpse of where I've been — from work experience to organizational life that shaped who I am.
+                        The tools and technologies I use to design, build, test, and improve web applications.
                     </p>
                 </FadeInSection>
             </div>
 
-            {/* Filter giữ nguyên */}
             <div className="flex justify-center gap-4 my-6">
                 {categories.map((cat) => (
                     <button
@@ -64,7 +63,6 @@ const Skills = () => {
                 ))}
             </div>
 
-            {/* Grid với animation */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filtered.map((p, idx) => (
                     <SlideInSection

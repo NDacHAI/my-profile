@@ -6,7 +6,7 @@ const QuickStart = () => {
     const data = [
         { icon: <FontAwesomeIcon icon={faBriefcase} />, title: 'Intern', content: 'Experience' },
         { icon: <FontAwesomeIcon icon={faJs} />, title: 'JavaScript', content: 'Main Language' },
-        { icon: <FontAwesomeIcon icon={faCode} />, title: '1 Project', content: 'Total Project' },
+        { icon: <FontAwesomeIcon icon={faCode} />, title: 'Web', content: 'Development' },
     ];
 
     return (

@@ -10,7 +10,6 @@ import FadeInSection from "../../components/FadeInSection/FadeInSection";
 import SlideInSection from "../../components/SlideInSection/SlideInSection";
 
 const Home = () => {
-    // Hàm random chọn hiệu ứng
     const randomWrapper = (children, key) => {
         const effects = [
             <FadeInSection key={key} direction="up">{children}</FadeInSection>,
@@ -25,22 +24,20 @@ const Home = () => {
         <section id="home" className="pt-[80px] bg-white dark:bg-gray-900">
             <div className="max-w-7xl mx-auto pb-12 pt-12 sm:pt-0">
                 <div className="grid items-center lg:grid-cols-2 gap-12 min-h-[calc(100vh-5em)]">
-
                     <div>
                         {randomWrapper(
                             <h1 className="text-5xl font-bold text-gray-900 dark:text-white text-left">
-                                Hi, I'm Nguyễn
-                                <span className="block mt-3">Đắc Hải 👋</span>
+                                Hi, I'm Nguyen
+                                <span className="block mt-3">Dac Hai <span aria-hidden="true">👋</span></span>
                             </h1>,
                             "title"
                         )}
-
 
                         {randomWrapper(<MarqueeText />, "marquee")}
 
                         {randomWrapper(
                             <div className="font-light text-gray-900 dark:text-gray-300 max-w-lg mt-2 text-left">
-                                I build modern, responsive web apps with clean UI and smooth UX blending design and code to create experiences that feel intuitive, fast, and delightful to use.
+                                I'm a Web Developer focused on building responsive, clean, and user-friendly web applications with React, Tailwind CSS, and modern JavaScript.
                             </div>,
                             "desc"
                         )}
@@ -68,7 +65,7 @@ const Home = () => {
                                 <div className="flex flex-col gap-3 text-gray-900 dark:text-white font-semibold">
                                     <div className="flex items-center gap-3 pt-3">
                                         <FontAwesomeIcon icon={faBriefcase} />
-                                        <div>Quick Starts:</div>
+                                        <div>Quick Facts:</div>
                                     </div>
                                     <QuickStart />
                                 </div>

@@ -21,7 +21,7 @@ const SlideInSection = ({ children, direction = "left" }) => {
     return (
         <div
             ref={ref}
-            className={`inline-block w-full text-center transition-all duration-1000 ease-out
+            className={`inline-block h-full w-full text-center transition-all duration-1000 ease-out
             ${isVisible ? "opacity-100 translate-y-0" : `opacity-0 ${directionClasses[direction]}`}
         `}
         >

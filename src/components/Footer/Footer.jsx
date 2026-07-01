@@ -17,17 +17,15 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-12 border-t  border-gray-900 dark:border-white">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <footer className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-12 border-t border-gray-900 dark:border-white">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 px-4 sm:px-6 lg:px-8">
                 <div>
                     <h1 className="flex items-center text-2xl font-bold mb-2 gap-2">
                         <FontAwesomeIcon icon={faCode} />
-                        Nguyễn Đắc Hải
+                        Nguyen Dac Hai
                     </h1>
                     <span className="text-sm">
-                        Frontend Developer specializing in UI/UX, modern web technologies,
-                        and building smooth digital experiences with clean code & creative
-                        flow.
+                        Web Developer focused on responsive interfaces, clean code, and practical digital experiences.
                     </span>
                 </div>
                 <div>
@@ -64,9 +62,9 @@ const Footer = () => {
                         Stay updated with my latest projects and articles.
                     </div>
                     <input
-                        placeholder="enter your email"
+                        placeholder="Enter your email"
                         aria-label="Email address"
-                        className="w-full border border-gray-900 dark:border-gray-900 rounded-xl p-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-900 dark:placeholder-white"
+                        className="w-full border border-gray-900 dark:border-white rounded-xl p-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-white placeholder-gray-600 dark:placeholder-gray-300"
                     />
                     <button
                         aria-label="Subscribe to newsletter"

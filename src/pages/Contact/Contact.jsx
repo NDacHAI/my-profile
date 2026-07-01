@@ -16,18 +16,15 @@ const Contact = () => {
 
     return (
         <section id="contact" className="max-w-7xl mx-auto py-12 flex flex-col justify-center scroll-mt-[40px]">
-
-            {/* Tiêu đề */}
             <FadeInSection direction="up">
                 <div className="text-center">
                     <h2 className="text-4xl font-bold text-gray-900 dark:text-white">Contact Me</h2>
                     <p className="text-gray-700 dark:text-gray-300 mt-3 font-medium text-lg">
-                        Reach out via form, social media, or support platforms.
+                        Reach out via email, social media, or the contact form.
                     </p>
                 </div>
             </FadeInSection>
 
-            {/* Nút chọn category */}
             <SlideInSection direction="up">
                 <div className="flex justify-center gap-4 my-6">
                     {categories.map((cat, index) => (
@@ -46,11 +43,9 @@ const Contact = () => {
                 </div>
             </SlideInSection>
 
-            {/* Nội dung component */}
             <SlideInSection direction="up">
                 {selectedCat === 'Contact Me' ? <ContactMe /> : <SupportMe />}
             </SlideInSection>
-
         </section>
     );
 };
